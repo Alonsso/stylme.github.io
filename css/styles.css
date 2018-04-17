@@ -1,0 +1,178 @@
+*{
+	margin:0; 
+	padding:0;
+	box-sizing: border-box;
+}
+html{
+	height: 100%;
+}
+body{
+	background-color: #f2f2f2;
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: 16px;
+	padding-top: 180px;
+	height: 100vh;
+
+	display: flex;
+
+	flex-direction: column;
+}
+
+header{
+	background-color: #fff;
+	position: fixed;
+	width: 100%;
+	top: 0;
+}
+
+.menu{
+	width: 90%;
+	max-width: 1000px;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.menu .logo{
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.menu .logo img{
+	vertical-align: top;
+	height: 150px;
+}
+
+.menu .btMenu {
+	display: none;
+	color: #0A6E98;
+	text-decoration: none;
+	font-size: 1em;
+}
+
+.menu .links {
+	display: inline-block;
+	text-align: right;
+}
+
+.menu .links a{
+	color:#0A6E98;
+	text-decoration: none;
+	display: inline-block;
+	padding: 1em;
+	font-size: 24px;
+	text-align: center;
+}
+
+.menu .links i{
+	margin-right: 5px;
+}
+
+.menu .links a:hover{
+	background:#f2f2f2;
+}
+
+main{
+	width: 90%;
+	max-width: 1000px;
+	margin:20px auto;
+	background: #f2f2f2;
+	padding: 20px;
+	box-shadow: 0px 2px 5px rgba(0,0,0,0.75);
+}
+
+main article h1{
+	font-weight: normal;
+	margin-bottom: .5em;
+}
+
+main article hr{
+	margin-bottom: 1em;
+	height: 2px;
+	background: #0A6E98;
+	border: none;
+}
+
+main article p{
+	margin-bottom: 1em;
+}
+
+.contenido {
+	flex:1;
+}
+
+#footer {
+  background-color: #C9D6E5;
+  padding: 10px;
+  text-align: center;
+}
+
+#footer .social {
+	display: inline-block;
+	padding: 5px;
+}	
+
+#footer .social .googleplus{
+	color:#0A4453;
+}
+
+#footer .social .twitter{
+	color:#0A4453;
+}
+
+/* efectos del menu */
+
+.headroom {
+	transition: transform .3s ease;
+}
+
+.headroom--pinned {
+	transform: translateY(0%);
+}
+
+.headroom--unpinned {
+	transform: translateY(-100%);
+}
+
+/*MediaQueries*/
+
+@media screen and (max-width: 700px) {
+	header .menu {
+		flex-direction: column;
+	}
+
+	header .menu .logo {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+		padding: 1em;
+	}
+
+	header .menu .logo .btMenu {
+		display: inline-block;
+	}
+
+	header .menu .links {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
