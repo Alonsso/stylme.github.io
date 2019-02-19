@@ -103,6 +103,8 @@ main article p{
 	flex:1;
 }
 
+/* efectos del footer */
+
 #footer {
   background-color: #C9D6E5;
   padding: 10px;
@@ -114,7 +116,7 @@ main article p{
 	padding: 5px;
 }	
 
-#footer .social .googleplus{
+#footer .social .githubprofile{
 	color:#0A4453;
 }
 
