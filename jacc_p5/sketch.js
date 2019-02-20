@@ -1,19 +1,15 @@
-var canvas;
-var mic;
-
-function windowResized(){
-	resizeCanvas(windowWidth, windowHeight);
+const sketch = function(p){
+	var mic;
+	p.setup = function(){
+		p.createCanvas(370,370);
+		mic = new p5.AudioIn();
+		mic.start();
+	}
+	p.draw = function(){
+		p.background(0);
+		micLevel = mic.getLevel();
+		p.ellipse(370/2,370/2,micLevel*4000);
+	}
 }
 
-function setup(){
-	canvas = createCanvas(windowWidth,windowHeight);
-	canvas.position(0,0);
-	mic = new p5.AudioIn();
-	mic.start();
-}
-
-function draw(){
-	background(0);
-	var volume = mic.getLevel();
-	ellipse(width/2,height/2, volume * width);
-}
+const myp5_1 = new p5(sketch, 'sketchUno');
